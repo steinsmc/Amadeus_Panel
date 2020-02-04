@@ -31,3 +31,6 @@ Route::get('/login',function (){
 })->name('login');
 Route::post('/login',"AuthController@login");
 Route::post('/register',"AuthController@register");
+Route::get('/about',function (){
+    return view("about");
+});

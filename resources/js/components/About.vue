@@ -121,74 +121,20 @@
             <v-container fluid>
                 <v-row class="dashboard">
                     <v-col cols="12">
-                        <v-toolbar
-                                dark
-                                color="blue darken-3"
-                                class="mb-1"
+                        <v-card
+                        class="mx-auto"
                         >
-                            <v-text-field
-                                    v-model="search"
-                                    clearable
-                                    flat
-                                    solo-inverted
-                                    hide-details
-                                    prepend-inner-icon="search"
-                                    label="Search"
-                            ></v-text-field>
-                            <template v-if="$vuetify.breakpoint.mdAndUp">
-                                <v-spacer></v-spacer>
-                                <v-select
-                                        v-model="sortBy"
-                                        flat
-                                        solo-inverted
-                                        hide-details
-                                        :items="keys"
-                                        prepend-inner-icon="search"
-                                        label="Sort by"
-                                ></v-select>
-                                <v-spacer></v-spacer>
-                                <v-btn-toggle
-                                        v-model="sortDesc"
-                                        mandatory
-                                >
-                                    <v-btn
-                                            large
-                                            depressed
-                                            color="blue"
-                                            :value="false"
-                                    >
-                                        <v-icon>mdi-arrow-up</v-icon>
-                                    </v-btn>
-                                    <v-btn
-                                            large
-                                            depressed
-                                            color="blue"
-                                            :value="true"
-                                    >
-                                        <v-icon>mdi-arrow-down</v-icon>
-                                    </v-btn>
-                                </v-btn-toggle>
-                            </template>
-                        </v-toolbar>
-                    </v-col>
-                    <v-col cols="12">
-                        <v-card>
-                            <v-card-title>
-                                Nutrition
-                                <v-spacer></v-spacer>
-                                <v-text-field
-                                        v-model="search"
-                                        append-icon="search"
-                                        label="Search"
-                                        single-line
-                                        hide-details
-                                ></v-text-field>
-                            </v-card-title>
-                            <v-data-table
-                                    :headers="headers"
-                                    :items="desserts"
-                                    :search="search"
-                            ></v-data-table>
+                        <v-card-title>
+                            <span>About</span>
+                        </v-card-title>
+
+                        <v-card-text>
+                            Powered by Amadeus. Bugdhdj YES!
+                        </v-card-text>
+
+                        <v-card-actions>
+
+                        </v-card-actions>
                         </v-card>
                     </v-col>
                 </v-row>
@@ -211,107 +157,11 @@
             drawer: window.localStorage.getItem("drawer") !== "false",
             items: [
                 { icon: 'home', text: 'Home',model: false},
-                { icon: 'dashboard', text: 'Dashboard',model: true},
+                { icon: 'dashboard', text: 'Dashboard',model: false},
                 { icon: 'account_circle', text: 'Login',model: false},
-                { icon: 'help_outline', text: 'About',model: false},
+                { icon: 'help_outline', text: 'About',model: true},
             ],
             sheet: false,
-            search: '',
-            headers: [
-                {
-                    text: 'Dessert (100g serving)',
-                    align: 'left',
-                    sortable: false,
-                    value: 'name',
-                },
-                { text: 'Calories', value: 'calories' },
-                { text: 'Fat (g)', value: 'fat' },
-                { text: 'Carbs (g)', value: 'carbs' },
-                { text: 'Protein (g)', value: 'protein' },
-                { text: 'Iron (%)', value: 'iron' },
-            ],
-            desserts: [
-                {
-                    name: 'Frozen Yogurt',
-                    calories: 159,
-                    fat: 6.0,
-                    carbs: 24,
-                    protein: 4.0,
-                    iron: '1%',
-                },
-                {
-                    name: 'Ice cream sandwich',
-                    calories: 237,
-                    fat: 9.0,
-                    carbs: 37,
-                    protein: 4.3,
-                    iron: '1%',
-                },
-                {
-                    name: 'Eclair',
-                    calories: 262,
-                    fat: 16.0,
-                    carbs: 23,
-                    protein: 6.0,
-                    iron: '7%',
-                },
-                {
-                    name: 'Cupcake',
-                    calories: 305,
-                    fat: 3.7,
-                    carbs: 67,
-                    protein: 4.3,
-                    iron: '8%',
-                },
-                {
-                    name: 'Gingerbread',
-                    calories: 356,
-                    fat: 16.0,
-                    carbs: 49,
-                    protein: 3.9,
-                    iron: '16%',
-                },
-                {
-                    name: 'Jelly bean',
-                    calories: 375,
-                    fat: 0.0,
-                    carbs: 94,
-                    protein: 0.0,
-                    iron: '0%',
-                },
-                {
-                    name: 'Lollipop',
-                    calories: 392,
-                    fat: 0.2,
-                    carbs: 98,
-                    protein: 0,
-                    iron: '2%',
-                },
-                {
-                    name: 'Honeycomb',
-                    calories: 408,
-                    fat: 3.2,
-                    carbs: 87,
-                    protein: 6.5,
-                    iron: '45%',
-                },
-                {
-                    name: 'Donut',
-                    calories: 452,
-                    fat: 25.0,
-                    carbs: 51,
-                    protein: 4.9,
-                    iron: '22%',
-                },
-                {
-                    name: 'KitKat',
-                    calories: 518,
-                    fat: 26.0,
-                    carbs: 65,
-                    protein: 7,
-                    iron: '6%',
-                },
-            ],
         }),
         mounted(){
         },

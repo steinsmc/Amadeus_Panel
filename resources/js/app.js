@@ -29,6 +29,7 @@ Vue.use(Vuex);
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('login',require('./components/Login').default);
 Vue.component('dashboard',require('./components/Dashboard').default);
+Vue.component('about',require('./components/About').default);
 
 const store = new Vuex.Store({
     state: {
