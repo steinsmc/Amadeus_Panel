@@ -18,8 +18,16 @@ Route::get('/', function () {
         return redirect("/login");
     }
 });
-
+Route::get('/dashboard', function () {
+    return view("dashboard");
+})->middleware("auth");
 
 Route::get('/login',function (){
+    if(auth()->check()) {
+        return redirect("/dashboard");
+    }
     return view("login");
-});
+
+})->name('login');
+Route::post('/login',"AuthController@login");
+Route::post('/register',"AuthController@register");

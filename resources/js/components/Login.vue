@@ -59,6 +59,7 @@
                     </v-list-group>
                     <v-list-item
                         v-else
+                        v-model="item.model"
                         :key="item.text"
                         link
                     >
@@ -101,14 +102,15 @@
                         Powered by Amadeus
                     </v-btn>
                 </template>
-                <v-sheet class="text-center powered" height="200px">
+                <v-sheet class="text-center powered" height="270px">
                     <v-btn
                         class="mt-6"
                         text
                         color="succes"
                         @click="sheet = !sheet"
                     >close</v-btn>
-                    <div class="my-4">{{ this.app_name }} Powered By <a href="https://github.com/steinsmc/amadeus">SteinsMC Amadeus</a>.
+                    <div class="my-4"><a href="https://github.com/steinsmc/Amadeus"><img src="favicon.ico" alt="" height="80px"></a>
+                        <br>{{ this.app_name }} Powered By <a href="https://github.com/steinsmc/Amadeus ">SteinsMC Amadeus</a>.
                         <br> Amadeus Panel Version {{ this.version }}.
                         <br> Open source Game Server Controlling System. If you like it,please <a href="https://github.com/steinsmc/Amadeus">give us a star</a> or donate us.</div>
 
@@ -131,25 +133,39 @@
                         lg="4"
                         xl="4"
                     >
-                        <v-card class="elevation-12 login-card">
+                        <v-card class="elevation-12 login-card" :loading="loading">
                             <v-card-text>
                                 <div class="login_card_title">
                                     <h1><v-icon>cloud</v-icon> {{ this.app_name}}</h1>
                                 </div>
-                                <v-form>
+                                <v-form @keyup.enter.native="login">
+                                    <br>
+                                    <v-alert
+                                            :value="alert.display"
+                                            outlined
+                                            :type="alert.type"
+                                            border="left"
+                                            transition="scale-transition"
+                                    >
+                                        {{ alert.message }}
+                                    </v-alert>
                                     <v-text-field
                                         label="Login"
                                         name="login"
+                                        v-model="name"
                                         prepend-icon="person"
                                         type="text"
+                                        :disabled="loading"
                                     />
 
                                     <v-text-field
                                         id="password"
                                         label="Password"
                                         name="password"
+                                        v-model="password"
                                         prepend-icon="lock"
                                         type="password"
+                                        :disabled="loading"
                                     />
                                     <v-checkbox
                                         v-model="checkbox"
@@ -166,7 +182,8 @@
                                 <v-btn
                                     color="eep-purple accent-4"
                                     depressed
-                                    @click="next()"
+                                    :loading="loading"
+                                    @click="login()"
                                 >
                                     Login
                                 </v-btn>
@@ -183,7 +200,6 @@
 
 
 <script>
-    import Cookies from 'js-cookie';
     export default {
         name: "Login",
         data: () => ({
@@ -192,23 +208,60 @@
             props: {
                 source: String,
             },
-            drawer: false,
+            drawer: window.localStorage.getItem("drawer") !== "false",
             items: [
-                { icon: 'mdi-home', text: 'Home' },
+                { icon: 'home', text: 'Home',model: false},
+                { icon: 'dashboard', text: 'Dashboard',model: false},
+                { icon: 'account_circle', text: 'Login',model: true},
+                { icon: 'help_outline', text: 'About',model: false},
             ],
             sheet: false,
             checkbox: true,
+            name: null,
+            password: null,
+            alert: {
+                display: false,
+                type: null,
+                message: null
+            },
+            loading: false,
         }),
         mounted(){
-            if(Cookies.get('drawer') == null){
-                Cookies.set('drawer',false);
-            }
-            this.drawer = Cookies.get('drawer');
         },
         watch: {
             drawer(newVal,oldVal){
-                Cookies.set('drawer',newVal);
+                window.localStorage.setItem("drawer",newVal);
             }
+        },
+        methods: {
+            error: function (message) {
+                this.alert.message = message;
+                this.alert.type = "error";
+                this.alert.display = true;
+            },
+            success: function(message) {
+                this.alert.message = message;
+                this.alert.type = "success";
+                this.alert.display = true;
+            },
+            login: function () {
+                this.loading = true;
+                this.alert.display = false;
+                window.axios.post('/login', {
+                    name: this.name,
+                    password: this.password
+                }).then(response => {
+                    this.success("登录成功");
+                    setTimeout(window.location.href="/dashboard",1);
+                }).catch (response => {
+                    if(response.response.status === 401){
+                        this.error("用户名或密码不匹配");
+                    }else{
+                        this.error("用户名或密码不匹配 请重试");
+                    }
+                    this.loading = false;
+                });
+            },
         }
     }
 </script>
