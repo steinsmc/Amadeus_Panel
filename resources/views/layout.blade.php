@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="amadeus" content='0.0.1-bugdhdj'>
-    <meta name="amadeus_app_name" content='BDC'>
+    <meta name="amadeus_app_name" content='{{env("APP_NAME","Amadeus")}}'>
 
     <title>@yield('title') - {{env("APP_NAME","Amadeus")}}</title>
 
