@@ -1940,6 +1940,65 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Dashboard",
@@ -23489,8 +23548,152 @@ var render = function() {
                           _vm._v(" "),
                           _c("v-card-text", [
                             _vm._v(
-                              "\n                        Powered by Amadeus. Bugdhdj YES!\n                    "
+                              "\n                        Amadeus (Panel & Daemon) is a brand new server manager that can host multiple games and servers at a time. "
+                            ),
+                            _c("br"),
+                            _vm._v(
+                              "\n                        The Daemon is designed by William Wang (dhdj) using php. (shout out to php)\n                        And the Panel is designed By Xinming Li (Lixworth).\n                        "
+                            ),
+                            _c("br"),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("h3", [_vm._v("Reason why we are making this")]),
+                            _vm._v(
+                              "\n                        The main reason why we are making this is that..........We're kinda bored."
+                            ),
+                            _c("br"),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("h3", [_vm._v("When will this be completed")]),
+                            _vm._v(
+                              "\n                        Hopefully it's basic functionality will be completed by the end of 2020. But we're not sure.\n                    "
                             )
+                          ]),
+                          _vm._v(" "),
+                          _c("v-card-actions")
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card",
+                        {
+                          staticClass: "mx-auto",
+                          staticStyle: { "margin-top": "20px" }
+                        },
+                        [
+                          _c("v-card-title", [_c("span", [_vm._v("Sponsor")])]),
+                          _vm._v(" "),
+                          _c("v-card-text", [
+                            _c("li", [_vm._v("PHP")]),
+                            _c("li", [_vm._v("NodeJS")]),
+                            _c("li", [_vm._v("Javascript")]),
+                            _c("li", [_vm._v("Intelij")]),
+                            _c("li", [_vm._v("Multicraft")]),
+                            _c("li", [_vm._v("Composer")]),
+                            _c("li", [_vm._v("ITXE")])
+                          ]),
+                          _vm._v(" "),
+                          _c("v-card-actions")
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card",
+                        {
+                          staticClass: "mx-auto",
+                          staticStyle: { "margin-top": "20px" }
+                        },
+                        [
+                          _c("v-card-title", [
+                            _c("span", [_vm._v("Donation")])
+                          ]),
+                          _vm._v(" "),
+                          _c("v-card-text", [
+                            _vm._v(
+                              "\n                            We currently do not accept donation, but you can support us by improving Amadeus. If you wish to join the dev team, contact QQ3332697908 or 2758417019\n                        "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("v-card-actions")
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card",
+                        {
+                          staticClass: "mx-auto",
+                          staticStyle: { "margin-top": "20px" }
+                        },
+                        [
+                          _c("v-card-title", [_c("span", [_vm._v("Photos")])]),
+                          _vm._v(" "),
+                          _c("v-card-text", [
+                            _c("img", {
+                              attrs: {
+                                src: "images/1.jpg",
+                                alt: "My Parrot",
+                                height: "100"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              attrs: {
+                                src: "images/2.jpg",
+                                alt: "My Parrot",
+                                height: "100"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              attrs: {
+                                src: "images/3.jpg",
+                                alt: "My Parrot",
+                                height: "100"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              attrs: {
+                                src: "images/4.jpg",
+                                alt: "My Parrot",
+                                height: "100"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              attrs: {
+                                src: "images/5.jpg",
+                                alt: "My Parrot",
+                                height: "100"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              attrs: {
+                                src: "images/6.jpg",
+                                alt: "My Parrot",
+                                height: "100"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              attrs: {
+                                src: "images/7.jpg",
+                                alt: "My Parrot",
+                                height: "100"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              attrs: {
+                                src: "images/8.jpg",
+                                alt: "My Parrot",
+                                height: "100"
+                              }
+                            })
                           ]),
                           _vm._v(" "),
                           _c("v-card-actions")
@@ -79172,8 +79375,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\LixWorth\PhpstormProjects\Amadeus_Panel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\LixWorth\PhpstormProjects\Amadeus_Panel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\dhdjw\PhpstormProjects\Amadeus_Panel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\dhdjw\PhpstormProjects\Amadeus_Panel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
