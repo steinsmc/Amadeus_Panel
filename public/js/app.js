@@ -24499,7 +24499,7 @@ var render = function() {
                     ),
                     _vm._v(" "),
                     _c("br"),
-                    _vm._v(_vm._s(this.app_name) + " Powered By "),
+                    _vm._v(_vm._s(this.app_name) + " is powered by "),
                     _c(
                       "a",
                       {
@@ -24507,25 +24507,31 @@ var render = function() {
                       },
                       [_vm._v("SteinsMC Amadeus")]
                     ),
-                    _vm._v(".\n                    "),
+                    _vm._v(
+                      ", a non-commercial open source project.\n                    "
+                    ),
                     _c("br"),
                     _vm._v(
-                      " Amadeus Panel Version " +
+                      " Version: " +
                         _vm._s(this.version) +
                         ".\n                    "
                     ),
                     _c("br"),
                     _vm._v(
-                      " Open source Game Server Controlling System. If you like it,please "
+                      " Open source game server management system. Please consider "
                     ),
                     _c(
                       "a",
                       {
                         attrs: { href: "https://github.com/steinsmc/Amadeus" }
                       },
-                      [_vm._v("give us a star")]
+                      [_vm._v("giving us a star")]
                     ),
-                    _vm._v(" or donate us.")
+                    _vm._v(" or "),
+                    _c("a", { attrs: { href: "/about" } }, [
+                      _vm._v("joining our dev team")
+                    ]),
+                    _vm._v(".")
                   ])
                 ],
                 1

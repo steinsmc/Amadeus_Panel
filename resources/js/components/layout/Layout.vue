@@ -111,9 +111,9 @@
                             @click="sheet = !sheet"
                     >close</v-btn>
                     <div class="my-4"><a href="https://github.com/steinsmc/Amadeus"><img src="favicon.ico" alt="" height="80px"></a>
-                        <br>{{ this.app_name }} Powered By <a href="https://github.com/steinsmc/Amadeus ">SteinsMC Amadeus</a>.
-                        <br> Amadeus Panel Version {{ this.version }}.
-                        <br> Open source Game Server Controlling System. If you like it,please <a href="https://github.com/steinsmc/Amadeus">give us a star</a> or donate us.</div>
+                        <br>{{ this.app_name }} is powered by <a href="https://github.com/steinsmc/Amadeus ">SteinsMC Amadeus</a>, a non-commercial open source project.
+                        <br> Version: {{ this.version }}.
+                        <br> Open source game server management system. Please consider <a href="https://github.com/steinsmc/Amadeus">giving us a star</a> or <a href="/about">joining our dev team</a>.</div>
 
                 </v-sheet>
             </v-bottom-sheet>
