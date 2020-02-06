@@ -6,6 +6,18 @@
                 app
                 class="sidebar"
         >
+            <v-list-item two-line :class="miniVariant && 'px-0'">
+                <v-list-item-avatar>
+                    <img src="/images/avatar.jpg">
+                </v-list-item-avatar>
+
+                <v-list-item-content>
+                    <v-list-item-title>Tori</v-list-item-title>
+                    <v-list-item-subtitle>Root Admin</v-list-item-subtitle>
+                </v-list-item-content>
+            </v-list-item>
+
+            <v-divider></v-divider>
             <v-list dense>
                 <template v-for="item in items">
                     <v-row
