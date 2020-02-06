@@ -2278,6 +2278,10 @@ __webpack_require__.r(__webpack_exports__);
         if (item.daemon === _this2.getDaemonID(newVal)) {
           _this2.renderServers.push(item);
         }
+
+        if (_this2.getDaemonID(newVal) === 0) {
+          _this2.renderServers.push(item);
+        }
       });
     }
   }

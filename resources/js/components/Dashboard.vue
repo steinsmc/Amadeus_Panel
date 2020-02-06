@@ -269,6 +269,9 @@
                     if(item.daemon === this.getDaemonID(newVal)){
                         this.renderServers.push(item);
                     }
+                    if(this.getDaemonID(newVal) === 0){
+                        this.renderServers.push(item);
+                    }
                 });
 
             }
