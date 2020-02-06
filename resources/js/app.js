@@ -11,6 +11,8 @@ require('./bootstrap');
 window.Vue = require('vue');
 import Vuetify from 'vuetify';
 import Vuex from 'vuex'
+import preview from 'vue-photo-preview'
+import 'vue-photo-preview/dist/skin.css'
 
 console.log("\n" +
     " ______                              __                             \n" +
@@ -25,6 +27,7 @@ console.log("\n" +
 
 Vue.use(Vuetify);
 Vue.use(Vuex);
+Vue.use(preview);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 

@@ -65,14 +65,14 @@
                             </v-card-title>
 
                             <v-card-text>
-                                <img src="images/1.jpg" alt="My Parrot" height="100">
-                                <img src="images/2.jpg" alt="My Parrot" height="100">
-                                <img src="images/3.jpg" alt="My Parrot" height="100">
-                                <img src="images/4.jpg" alt="My Parrot" height="100">
-                                <img src="images/5.jpg" alt="My Parrot" height="100">
-                                <img src="images/6.jpg" alt="My Parrot" height="100">
-                                <img src="images/7.jpg" alt="My Parrot" height="100">
-                                <img src="images/8.jpg" alt="My Parrot" height="100">
+                                <img src="images/1.jpg" preview="0" alt="My Parrot" height="100">
+                                <img src="images/2.jpg" preview="0" alt="My Parrot" height="100">
+                                <img src="images/3.jpg" preview="0" alt="My Parrot" height="100">
+                                <img src="images/4.jpg" preview="0" alt="My Parrot" height="100">
+                                <img src="images/5.jpg" preview="0" alt="My Parrot" height="100">
+                                <img src="images/6.jpg" preview="0" alt="My Parrot" height="100">
+                                <img src="images/7.jpg" preview="0" alt="My Parrot" height="100">
+                                <img src="images/8.jpg" preview="0" alt="My Parrot" height="100">
                             </v-card-text>
 
                             <v-card-actions>
