@@ -12,6 +12,7 @@ window.Vue = require('vue');
 import Vuetify from 'vuetify';
 import Vuex from 'vuex'
 import preview from 'vue-photo-preview'
+import VueLazyload from 'vue-lazyload'
 import 'vue-photo-preview/dist/skin.css'
 
 console.log("\n" +
@@ -28,6 +29,7 @@ console.log("\n" +
 Vue.use(Vuetify);
 Vue.use(Vuex);
 Vue.use(preview);
+Vue.use(VueLazyload);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
