@@ -8,7 +8,7 @@
         >
             <v-list-item two-line :class="miniVariant && 'px-0'">
                 <v-list-item-avatar>
-                    <img :src="user.avatar">
+                    <img :src="user.avatar" preview="1">
                 </v-list-item-avatar>
 
                 <v-list-item-content>
