@@ -32,7 +32,7 @@ Route::get('/login',function (){
 Route::post('/login',"AuthController@login");
 Route::any('/logout',"AuthController@logout");
 Route::any('/user',"AuthController@getUser");
-Route::post('/register',"AuthController@register");
+Route::any('/register',"AuthController@register");
 Route::get('/about',function (){
     return view("about");
 });
