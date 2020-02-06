@@ -4,7 +4,7 @@
         <v-content>
             <v-container fluid>
                 <v-row class="dashboard">
-                    <v-col cols="12">
+                    <v-col cols="12" class="about-page">
                         <v-card
                         class="mx-auto"
                         >
@@ -106,4 +106,7 @@
 </script>
 
 <style scoped>
+    .about-page{
+        opacity: 0.9;
+    }
 </style>

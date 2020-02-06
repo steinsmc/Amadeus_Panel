@@ -37,4 +37,21 @@ class AuthController extends Controller
             return response()->json(['success' => false],400);
         }
     }
+
+    public function logout()
+    {
+        Auth::logout();
+
+        return redirect('/');
+    }
+
+    public function getUser()
+    {
+        if(!Auth::check()){
+            return response()->json(['success' => false],401);
+        }
+        $user = Auth::user();
+        $user->avatar = "//www.gravatar.com/avatar/".md5($user->email);
+        return response()->json(['success' => true,'data' => $user],200);
+    }
 }

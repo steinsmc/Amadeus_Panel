@@ -8,11 +8,11 @@
         >
             <v-list-item two-line :class="miniVariant && 'px-0'">
                 <v-list-item-avatar>
-                    <img src="/images/avatar.jpg">
+                    <img :src="user.avatar">
                 </v-list-item-avatar>
 
                 <v-list-item-content>
-                    <v-list-item-title>Tori</v-list-item-title>
+                    <v-list-item-title>{{ user.name }}</v-list-item-title>
                     <v-list-item-subtitle>Root Admin</v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
@@ -154,7 +154,6 @@
             items: [
                 { icon: 'home', text: 'Home',model: null,url: '/'},
                 { icon: 'dashboard', text: 'Dashboard',model: null,url: '/dashboard'},
-                { icon: 'account_circle', text: 'Login',model: null,url: '/login'},
                 { icon: 'help_outline', text: 'About',model: null,url: '/about'},
                 {
                     icon: 'mdi-chevron-up',
@@ -166,9 +165,26 @@
                         { icon: 'mdi-plus', text: 'Create label2',model: null},
                     ],
                 },
+                { icon: 'logout', text: 'Logout',model: null,url: '/logout'},
             ],
+            user: {
+                name: null,
+                avatar: null
+            }
         }),
         created: function(){
+            window.axios.post('/user', {
+            }).then(response => {
+                this.user.name = response.data.data.name;
+                this.user.avatar = response.data.data.avatar;
+            }).catch (response => {
+                if(response.response.status === 401){
+                    window.location.href="/login";
+                }else{
+
+                }
+            });
+
             //不知道除了for循环之外还有啥好方案
             this.items.forEach((item) => {
                 if(item.text === this.$attrs.model){
@@ -182,6 +198,8 @@
                     }
                 }
             });
+
+
         },
         watch: {
             drawer(newVal,oldVal){
