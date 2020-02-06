@@ -61,7 +61,7 @@
                             </v-card-title>
                             <v-data-table
                                     :headers="headers"
-                                    :items="servers"
+                                    :items="renderServers"
                                     :search="search"
                             ></v-data-table>
                         </v-card>
@@ -85,7 +85,9 @@
             admin: false,
             search: '',
             daemon: 'All Servers',
-            daemons: ['All Servers','ITXE - Multicraft','BugDHDJ- Amadeus'],
+            daemons: ['All Servers','ITXE - Multicraft','Bugdhdj - Amadeus'],
+            renderServers: [
+            ],
             headers: [
                 {
                     text: 'Name',
@@ -100,7 +102,7 @@
                 { text: 'Port', value: 'port' },
                 { text: 'Status', value: 'status' },
             ],
-            servers: [
+            servers:[
                 {
                     name: 'Arepa',
                     id: 1,
@@ -109,6 +111,7 @@
                     ip: '127.0.0.1',
                     port: 25565,
                     status: 'online',
+                    daemon: 1,
                 },
                 {
                     name: 'Chachitos',
@@ -118,6 +121,7 @@
                     ip: '127.0.0.1',
                     port: 25566,
                     status: 'error',
+                    daemon: 1,
                 },
                 {
                     name: 'Reineta',
@@ -127,6 +131,7 @@
                     ip: '127.0.0.1',
                     port: 25567,
                     status: 'online',
+                    daemon: 1,
                 },
                 {
                     name: 'Hallaca',
@@ -136,6 +141,8 @@
                     ip: '127.0.0.1',
                     port: 25568,
                     status: 'offline',
+                    daemon: 1,
+
                 },
                 {
                     name: 'Empanada',
@@ -145,6 +152,8 @@
                     ip: '127.0.0.1',
                     port: 25569,
                     status: 'online',
+                    daemon: 1,
+
                 },
                 {
                     name: 'Cachapa',
@@ -154,6 +163,8 @@
                     ip: '127.0.0.1',
                     port: 19132,
                     status: 'online',
+                    daemon: 1,
+
                 },
                 {
                     name: 'Cazuela',
@@ -163,6 +174,8 @@
                     ip: '127.0.0.1',
                     port: 19133,
                     status: 'offline',
+                    daemon: 1,
+
                 },
                 {
                     name: 'Pebre',
@@ -172,6 +185,8 @@
                     ip: '127.0.0.1',
                     port: 19134,
                     status: 'online',
+                    daemon: 1,
+
                 },
                 {
                     name: 'Sopaipilla',
@@ -181,6 +196,8 @@
                     ip: '127.0.0.1',
                     port: 19135,
                     status: 'online',
+                    daemon: 1,
+
                 },
                 {
                     name: 'Asado',
@@ -190,12 +207,80 @@
                     ip: '127.0.0.1',
                     port: 19136,
                     status: 'online',
+                    daemon: 1,
+
+                },
+                {
+                    name: '世博园外交',
+                    id: 1,
+                    owner: 'lixworth',
+                    type: 'Paperspigot 1.15.2',
+                    ip: '127.0.0.2',
+                    port: 25565,
+                    status: 'online',
+                    daemon: 2,
+
+                },
+                {
+                    name: '我们仍未知道那天所看见的服务器',
+                    id: 2,
+                    owner: 'lixworth',
+                    type: 'Nukkit',
+                    ip: '127.0.0.2',
+                    port: 25566,
+                    status: 'online',
+                    daemon: 2,
+
+                },
+                {
+                    name: 'Bugdhdj 官服',
+                    id: 3,
+                    owner: 'lixworth',
+                    type: 'Amadeus',
+                    ip: '127.0.0.3',
+                    port: 25567,
+                    status: 'offline',
+                    daemon: 2,
+                },
+                {
+                    name: 'YuzuSotServer',
+                    id: 4,
+                    owner: 'lixworth',
+                    type: 'PMMP',
+                    ip: '127.0.0.4',
+                    port: 25568,
+                    status: 'offline',
+                    daemon: 2,
                 },
             ],
         }),
         mounted(){
+            this.servers.forEach((item) => {
+                this.renderServers.push(item);
+            });
         },
-        methods: {}
+        methods: {
+            getDaemonID(daemon_name){
+                if(daemon_name === "ITXE - Multicraft"){
+                    return 1;
+                }else if(daemon_name === "Bugdhdj - Amadeus"){
+                    return 2;
+                }else{
+                    return 0; //All
+                }
+            }
+        },
+        watch: {
+            daemon(newVal,oldVal){
+                this.renderServers = []; //先清空 TODO:loading
+                this.servers.forEach((item) => {
+                    if(item.daemon === this.getDaemonID(newVal)){
+                        this.renderServers.push(item);
+                    }
+                });
+
+            }
+        },
     }
 </script>
 
