@@ -1,13 +1,11 @@
 <template>
-    <v-app id="inspire">
-        <Layout model="About"></Layout>
-        <v-content>
-            <v-container fluid>
-                <v-row class="dashboard">
-                    <v-col cols="12" class="about-page">
-                        <v-card
-                        class="mx-auto"
-                        >
+    <v-content>
+        <v-container fluid>
+            <v-row class="dashboard">
+                <v-col cols="12" class="about-page">
+                    <v-card
+                            class="mx-auto"
+                    >
                         <v-card-title>
                             <span>About</span>
                         </v-card-title>
@@ -26,46 +24,46 @@
                         <v-card-actions>
 
                         </v-card-actions>
-                        </v-card>
-                        <v-card
-                                class="mx-auto" style="margin-top:20px"
-                        >
-                            <v-card-title>
-                                <span>Sponsor</span>
-                            </v-card-title>
+                    </v-card>
+                    <v-card
+                            class="mx-auto" style="margin-top:20px"
+                    >
+                        <v-card-title>
+                            <span>Sponsor</span>
+                        </v-card-title>
 
-                            <v-card-text>
-                                <li>PHP</li><li>NodeJS</li><li>Javascript</li><li>Intelij</li><li>Multicraft</li><li>Composer</li><li>ITXE</li>
-                            </v-card-text>
+                        <v-card-text>
+                            <li>PHP</li><li>NodeJS</li><li>Javascript</li><li>Intelij</li><li>Multicraft</li><li>Composer</li><li>ITXE</li>
+                        </v-card-text>
 
-                            <v-card-actions>
+                        <v-card-actions>
 
-                            </v-card-actions>
-                        </v-card>
-                        <v-card
-                                class="mx-auto" style="margin-top:20px"
-                        >
-                            <v-card-title>
-                                <span>Donation</span>
-                            </v-card-title>
+                        </v-card-actions>
+                    </v-card>
+                    <v-card
+                            class="mx-auto" style="margin-top:20px"
+                    >
+                        <v-card-title>
+                            <span>Donation</span>
+                        </v-card-title>
 
-                            <v-card-text>
-                                We currently do not accept donation, but you can support us by improving Amadeus. If you wish to join the dev team, contact QQ3332697908 or 2758417019
-                            </v-card-text>
+                        <v-card-text>
+                            We currently do not accept donation, but you can support us by improving Amadeus. If you wish to join the dev team, contact QQ3332697908 or 2758417019
+                        </v-card-text>
 
-                            <v-card-actions>
+                        <v-card-actions>
 
-                            </v-card-actions>
-                        </v-card>
-                        <v-card
-                                class="mx-auto" style="margin-top:20px"
-                        >
-                            <v-card-title>
-                                <span>Photos</span>
-                            </v-card-title>
+                        </v-card-actions>
+                    </v-card>
+                    <v-card
+                            class="mx-auto" style="margin-top:20px"
+                    >
+                        <v-card-title>
+                            <span>Photos</span>
+                        </v-card-title>
 
-                            <v-card-text>
-                                <div v-lazy-container="{ selector: 'img' }">
+                        <v-card-text>
+                            <div v-lazy-container="{ selector: 'img' }">
                                 <img data-src="images/1.jpg" preview="0" alt="My Parrot" height="100">
                                 <img data-src="images/2.jpg" preview="0" alt="My Parrot" height="100">
                                 <img data-src="images/3.jpg" preview="0" alt="My Parrot" height="100">
@@ -74,29 +72,23 @@
                                 <img data-src="images/6.jpg" preview="0" alt="My Parrot" height="100">
                                 <img data-src="images/7.jpg" preview="0" alt="My Parrot" height="100">
                                 <img data-src="images/8.jpg" preview="0" alt="My Parrot" height="100">
-                                </div>
-                            </v-card-text>
+                            </div>
+                        </v-card-text>
 
-                            <v-card-actions>
+                        <v-card-actions>
 
-                            </v-card-actions>
-                        </v-card>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </v-content>
-
-    </v-app>
+                        </v-card-actions>
+                    </v-card>
+                </v-col>
+            </v-row>
+        </v-container>
+    </v-content>
 </template>
 
 
 <script>
-    import Layout from "./layout/Layout";
     export default {
         name: "Dashboard",
-        components: {
-            Layout
-        },
         data: () => ({
         }),
         mounted(){

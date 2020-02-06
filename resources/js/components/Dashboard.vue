@@ -1,86 +1,78 @@
 <template>
-    <v-app id="inspire">
-        <Layout model="Dashboard"></Layout>
+    <v-content>
+        <v-container fluid>
+            <v-row >
+                <v-col cols="12">
+                    <v-toolbar
+                            dark
+                            color="indigo"
+                            flat
 
-        <v-content>
-            <v-container fluid>
-                <v-row class="dashboard">
-                    <v-col cols="12">
-                        <v-toolbar
-                                dark
-                                color="blue darken-3"
-                                class="mb-1"
-                        >
-                            <v-text-field
-                                    v-model="search"
-                                    clearable
+                    >
+                        <v-text-field
+                                v-model="search"
+                                clearable
+                                flat
+                                solo-inverted
+                                hide-details
+                                prepend-inner-icon="search"
+                                label="Search All Daemon"
+                                background-color="primary"
+                        ></v-text-field>
+                        <template>
+                            <v-spacer></v-spacer>
+                            <v-select
+                                    v-model="daemon"
                                     flat
                                     solo-inverted
                                     hide-details
-                                    prepend-inner-icon="search"
-                                    label="Search All Daemon"
+                                    :items="daemons"
+                                    prepend-inner-icon="dns"
                                     background-color="primary"
+                                    label="Choose Daemon"
+                            ></v-select>
+                            <v-spacer v-if="$vuetify.breakpoint.mdAndUp"></v-spacer>
+                            <v-btn
+                                    v-if="$vuetify.breakpoint.mdAndUp"
+                                    large
+                                    depressed
+                                    color="blue"
+                                    href="/dashoard/status"
+                            >
+                                Status
+                            </v-btn>
+                        </template>
+                    </v-toolbar>
+                </v-col>
+                <v-col cols="12" class="dashboard">
+                    <v-card>
+                        <v-card-title>
+                            {{ this.daemon }}
+                            <v-spacer></v-spacer>
+                            <v-text-field
+                                    v-model="search"
+                                    append-icon="search"
+                                    label="Search in this daemon"
+                                    single-line
+                                    hide-details
                             ></v-text-field>
-                            <template>
-                                <v-spacer></v-spacer>
-                                <v-select
-                                        v-model="daemon"
-                                        flat
-                                        solo-inverted
-                                        hide-details
-                                        :items="daemons"
-                                        prepend-inner-icon="dns"
-                                        background-color="primary"
-                                        label="Choose Daemon"
-                                ></v-select>
-                                <v-spacer v-if="$vuetify.breakpoint.mdAndUp"></v-spacer>
-                                <v-btn
-                                        v-if="$vuetify.breakpoint.mdAndUp"
-                                        large
-                                        depressed
-                                        color="blue"
-                                        href="/dashoard/status"
-                                >
-                                    Status
-                                </v-btn>
-                            </template>
-                        </v-toolbar>
-                    </v-col>
-                    <v-col cols="12">
-                        <v-card>
-                            <v-card-title>
-                                {{ this.daemon }}
-                                <v-spacer></v-spacer>
-                                <v-text-field
-                                        v-model="search"
-                                        append-icon="search"
-                                        label="Search in this daemon"
-                                        single-line
-                                        hide-details
-                                ></v-text-field>
-                            </v-card-title>
-                            <v-data-table
-                                    :headers="headers"
-                                    :items="renderServers"
-                                    :search="search"
-                            ></v-data-table>
-                        </v-card>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </v-content>
-
-    </v-app>
+                        </v-card-title>
+                        <v-data-table
+                                :headers="headers"
+                                :items="renderServers"
+                                :search="search"
+                        ></v-data-table>
+                    </v-card>
+                </v-col>
+            </v-row>
+        </v-container>
+    </v-content>
 </template>
 
 
 <script>
-    import Layout from "./layout/Layout";
     export default {
         name: "Dashboard",
-        components: {
-            Layout
-        },
         data: () => ({
             admin: false,
             search: '',

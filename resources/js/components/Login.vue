@@ -4,7 +4,7 @@
         <v-content>
             <v-container
                 fluid
-                class="fill-height"
+                class="height-center"
             >
                 <v-row
                     align="center"
@@ -168,4 +168,13 @@
         text-align: center;
         padding-top: 15px;
     }
+
+  .height-center {
+      -webkit-box-align: center;
+      align-items: center;
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+  }
 </style>

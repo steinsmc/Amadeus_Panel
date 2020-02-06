@@ -9,11 +9,16 @@
 
 require('./bootstrap');
 window.Vue = require('vue');
+import Dashboard from './components/Dashboard';
+import About from './components/About';
+
 import Vuetify from 'vuetify';
 import Vuex from 'vuex'
 import preview from 'vue-photo-preview'
 import VueLazyload from 'vue-lazyload'
 import 'vue-photo-preview/dist/skin.css'
+import VueRouter from 'vue-router'
+
 
 console.log("\n" +
     " ______                              __                             \n" +
@@ -24,18 +29,26 @@ console.log("\n" +
     "   \\ \\_\\ \\_\\\\ \\_\\ \\_\\ \\_\\\\ \\__/.\\_\\\\ \\___,_\\\\ \\____\\\\ \\____/\\/\\____/\n" +
     "    \\/_/\\/_/ \\/_/\\/_/\\/_/ \\/__/\\/_/ \\/__,_ / \\/____/ \\/___/  \\/___/ \n" +
     "                                                                    \n" +
-    " Amadeus Panel Version: "+document.getElementsByTagName('meta')['amadeus'].content+" github: https://github.com/steinsmc ");
+    " Powered by Amadeus Panel Version:"+document.getElementsByTagName('meta')['amadeus'].content+" Copyright (c) 2019-2020 by SteinsMC. Github: https://github.com/steinsmc ");
 
 Vue.use(Vuetify);
 Vue.use(Vuex);
 Vue.use(preview);
 Vue.use(VueLazyload);
+Vue.use(VueRouter);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 Vue.component('login',require('./components/Login').default);
-Vue.component('dashboard',require('./components/Dashboard').default);
-Vue.component('about',require('./components/About').default);
+
+Vue.component('singlepage',require('./components/SinglePage').default);
+
+//TODO: NOT FOUND 与不需要vuerouter的路由处理
+const routes = [
+    { path: '/dashboard', component: Dashboard },
+    { path: '/about', component: About },
+];
+
 
 const store = new Vuex.Store({
     state: {
@@ -51,5 +64,8 @@ const app = new Vue({
     el: '#amadeus-bugdhdj-app', //BUGDHDJ 保佑无需debug
     store,
     vuetify: new Vuetify({}),
+    router: new VueRouter({
+        routes
+    }),
 });
 
