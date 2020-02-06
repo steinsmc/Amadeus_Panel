@@ -12,5 +12,3 @@ npm-debug.log
 yarn-error.log
 .idea
 public/adminer*.php
-public/css/app.css
-public/js/app.js

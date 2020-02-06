@@ -6,7 +6,7 @@
                 app
                 class="sidebar"
         >
-            <v-list-item two-line :class="miniVariant && 'px-0'">
+            <v-list-item two-line>
                 <v-list-item-avatar>
                         <img :src="user.avatar" preview="1" alt="amazing!">
                 </v-list-item-avatar>
@@ -75,7 +75,7 @@
                             v-model="item.model"
                             :key="item.text"
                             link
-                            :href="item.url"
+                            :to="item.url"
                     >
                         <v-list-item-action>
                             <v-icon>{{ item.icon }}</v-icon>
@@ -170,7 +170,7 @@
             user: {
                 name: null,
                 avatar: null
-            }
+            },
         }),
         created: function(){
             window.axios.post('/user', {

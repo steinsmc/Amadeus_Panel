@@ -12,14 +12,7 @@
 */
 
 Route::get('/', function () {
-    if(auth()->check()) {
-        return redirect("/dashboard");
-    }else{
-        return redirect("/login");
-    }
-});
-Route::get('/dashboard', function () {
-    return view("dashboard");
+    return view("single");
 })->middleware("auth");
 
 Route::get('/login',function (){
@@ -32,9 +25,6 @@ Route::get('/login',function (){
 Route::post('/login',"AuthController@login");
 Route::any('/logout',"AuthController@logout");
 Route::any('/user',"AuthController@getUser");
-Route::post('/register',"AuthController@register");
-Route::get('/about',function (){
-    return view("about");
-});
+Route::any('/register',"AuthController@register");
 
 Route::any('/daemons','DaemonController@all');

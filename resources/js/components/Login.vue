@@ -4,7 +4,7 @@
         <v-content>
             <v-container
                 fluid
-                class="fill-height"
+                class="height-center"
             >
                 <v-row
                     align="center"
@@ -101,8 +101,8 @@
         data: () => ({
             app_name: document.getElementsByTagName('meta')['amadeus_app_name'].content,
             checkbox: true,
-            name: null,
-            password: null,
+            name: 'bugdhdj',
+            password: 'bugdhdj',
             alert: {
                 display: false,
                 type: null,
@@ -111,11 +111,17 @@
             loading: false,
         }),
         mounted(){
+            this.info("测试账号密码均为bugdhdj");
         },
         methods: {
             error: function (message) {
                 this.alert.message = message;
                 this.alert.type = "error";
+                this.alert.display = true;
+            },
+            info: function (message) {
+                this.alert.message = message;
+                this.alert.type = "info";
                 this.alert.display = true;
             },
             success: function(message) {
@@ -162,4 +168,13 @@
         text-align: center;
         padding-top: 15px;
     }
+
+  .height-center {
+      -webkit-box-align: center;
+      align-items: center;
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+  }
 </style>
