@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Http\Controllers\Provider;
+namespace App\Http\Controllers\Provider;
 
 
 use App\Http\Controllers\DaemonController;

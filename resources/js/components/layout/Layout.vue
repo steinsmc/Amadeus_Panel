@@ -95,7 +95,7 @@
             <v-bottom-sheet v-model="sheet" inset>
                 <template v-slot:activator="{ on }">
                     <v-btn
-                            color=" accent-4"
+                            color="accent-4"
                             dark
                             text
                             v-on="on"
@@ -186,4 +186,5 @@
     .powered{
         opacity: 0.9;
     }
+
 </style>

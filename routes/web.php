@@ -34,3 +34,5 @@ Route::post('/register',"AuthController@register");
 Route::get('/about',function (){
     return view("about");
 });
+
+Route::any('/daemons','DaemonController@all');

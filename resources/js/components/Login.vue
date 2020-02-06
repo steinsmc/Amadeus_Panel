@@ -1,9 +1,10 @@
 <template>
     <v-app id="inspire">
-        <Layout model="Login"></Layout>
+<!--        <Layout model="Login"></Layout>-->
         <v-content>
             <v-container
                 fluid
+                class="fill-height"
             >
                 <v-row
                     align="center"
@@ -62,6 +63,14 @@
 
                             <v-divider></v-divider>
                             <v-card-actions>
+                                <v-btn
+                                        color="accent-4"
+                                        text
+                                        :loading="loading"
+                                        href="/"
+                                >
+                                    <v-icon>keyboard_arrow_left</v-icon> BACK
+                                </v-btn>
                                 <v-spacer></v-spacer>
                                 <v-btn
                                     color="eep-purple accent-4"
@@ -137,6 +146,13 @@
 </script>
 
 <style scoped>
+  /*  #inspire{
+        background: url("/images/login.jpg") no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+    }*/
     .login-card{
         opacity: 0.9;
         border-radius:9px;
