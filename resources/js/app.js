@@ -29,7 +29,9 @@ console.log("\n" +
 Vue.use(Vuetify);
 Vue.use(Vuex);
 Vue.use(preview);
-Vue.use(VueLazyload);
+Vue.use(VueLazyload, {
+    lazyComponent: true
+});
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
