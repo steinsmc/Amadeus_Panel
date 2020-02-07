@@ -3,10 +3,59 @@
         <v-container fluid>
             <v-row >
                 <v-col cols="12">
+                    <v-card>
+                        <v-card-title>
+                            {{ this.daemon }} Status
+                        </v-card-title>
+                        <div class="text-center" style="padding-bottom:20px">
+                            <v-progress-circular
+                                    :rotate="-90"
+                                    :size="100"
+                                    :width="15"
+                                    :value="10"
+                                    color="teal"
+                            >
+                                10%
+                            </v-progress-circular>
+
+                            <v-progress-circular
+                                    :rotate="-90"
+                                    :size="100"
+                                    :width="15"
+                                    :value="10"
+                                    color="primary"
+                            >
+                                10%
+                            </v-progress-circular>
+
+                            <v-progress-circular
+                                    :rotate="-90"
+                                    :size="100"
+                                    :width="15"
+                                    :value="10"
+                                    color="red"
+                            >
+                                10%
+                            </v-progress-circular>
+
+                            <v-progress-circular
+                                    :rotate="-90"
+                                    :size="100"
+                                    :width="15"
+                                    :value="10"
+                                    color="pink"
+                            >
+                                10%
+                            </v-progress-circular>
+                        </div>
+                    </v-card>
+                </v-col>
+                <v-col cols="12">
                     <v-toolbar
                             dark
                             color="indigo"
                             flat
+                            style="border-radius:4px"
 
                     >
                         <v-text-field
