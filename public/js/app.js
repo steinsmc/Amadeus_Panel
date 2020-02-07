@@ -2142,6 +2142,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Dashboard",
   data: function data() {
@@ -27905,7 +27906,9 @@ var render = function() {
                 [
                   _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
                     _vm._v(
-                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                      "\n                    " +
+                        _vm._s(_vm.$t("hello")) +
+                        "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
                     )
                   ])
                 ],
@@ -86271,23 +86274,28 @@ var routes = [{
   path: '/about',
   component: _components_About__WEBPACK_IMPORTED_MODULE_1__["default"]
 }];
+
+function loadLocaleMessages() {
+  var locales = __webpack_require__("./resources/lang sync recursive [A-Za-z0-9-_,\\s]+\\.json$/");
+
+  var messages = {};
+  locales.keys().forEach(function (key) {
+    var matched = key.match(/([A-Za-z0-9-_]+)\./i);
+
+    if (matched && matched.length > 1) {
+      var locale = matched[1];
+      messages[locale] = locales(key);
+    }
+  });
+  return messages;
+}
+
+;
 var store = new vuex__WEBPACK_IMPORTED_MODULE_3__["default"].Store({
   state: {},
   mutations: {},
   actions: {}
 });
-var messages = {
-  en: {
-    message: {
-      hello: 'hello world'
-    }
-  },
-  zh_cn: {
-    message: {
-      hello: '你好世界'
-    }
-  }
-};
 var app = new Vue({
   el: '#amadeus-bugdhdj-app',
   //BUGDHDJ 保佑无需debug
@@ -86297,8 +86305,8 @@ var app = new Vue({
     routes: routes
   }),
   i18n: new vue_i18n__WEBPACK_IMPORTED_MODULE_8__["default"]({
-    locale: 'zh-cn',
-    messages: messages
+    locale: 'zh_cn',
+    messages: loadLocaleMessages()
   })
 });
 
@@ -86833,6 +86841,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Layout_vue_vue_type_template_id_4d412614_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/lang sync recursive [A-Za-z0-9-_,\\s]+\\.json$/":
+/*!*******************************************************!*\
+  !*** ./resources/lang sync [A-Za-z0-9-_,\s]+\.json$/ ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./en.json": "./resources/lang/en.json",
+	"./zh_cn.json": "./resources/lang/zh_cn.json"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./resources/lang sync recursive [A-Za-z0-9-_,\\s]+\\.json$/";
+
+/***/ }),
+
+/***/ "./resources/lang/en.json":
+/*!********************************!*\
+  !*** ./resources/lang/en.json ***!
+  \********************************/
+/*! exports provided: lang, hello, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"lang\":\"English\",\"hello\":\"Hello\"}");
+
+/***/ }),
+
+/***/ "./resources/lang/zh_cn.json":
+/*!***********************************!*\
+  !*** ./resources/lang/zh_cn.json ***!
+  \***********************************/
+/*! exports provided: lang, hello, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"lang\":\"简体中文\",\"hello\":\"你好\"}");
 
 /***/ }),
 
