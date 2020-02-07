@@ -2142,6 +2142,138 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Dashboard",
   data: function data() {
@@ -25948,6 +26080,274 @@ var render = function() {
                   attrs: { cols: "12" }
                 },
                 [
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "v-alert",
+                    { attrs: { type: "warning", dismissible: "" } },
+                    [
+                      _vm._v(
+                        "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
+                    _vm._v(
+                      "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
+                    )
+                  ]),
+                  _vm._v(" "),
                   _c("v-alert", { attrs: { type: "info", dismissible: "" } }, [
                     _vm._v(
                       "\n                    This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.\n                "
