@@ -8,7 +8,7 @@
         >
             <v-list-item two-line>
                 <v-list-item-avatar>
-                    <img :src="user.avatar" preview="1">
+                        <img :src="user.avatar" preview="1" alt="amazing!">
                 </v-list-item-avatar>
 
                 <v-list-item-content>
