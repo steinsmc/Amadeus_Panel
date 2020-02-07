@@ -137,7 +137,7 @@
                     password: this.password
                 }).then(response => {
                     this.success("登录成功");
-                    setTimeout(window.location.href="/dashboard",1);
+                    setTimeout(window.location.href="/#/dashboard",1);
                 }).catch (response => {
                     if(response.response.status === 401){
                         this.error("用户名或密码不匹配");

@@ -2475,7 +2475,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         _this.success("登录成功");
 
-        setTimeout(window.location.href = "/dashboard", 1);
+        setTimeout(window.location.href = "/#/dashboard", 1);
       })["catch"](function (response) {
         if (response.response.status === 401) {
           _this.error("用户名或密码不匹配");
