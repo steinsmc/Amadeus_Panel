@@ -3,6 +3,49 @@
         <v-container fluid>
             <v-row >
                 <v-col cols="12">
+                    <v-toolbar
+                            dark
+                            color="indigo"
+                            flat
+                            style="border-radius:4px"
+
+                    >
+                        <v-text-field
+                                v-model="search"
+                                clearable
+                                flat
+                                solo-inverted
+                                hide-details
+                                prepend-inner-icon="search"
+                                label="Search All Daemon"
+                                background-color="primary"
+                        ></v-text-field>
+                        <template>
+                            <v-spacer></v-spacer>
+                            <v-select
+                                    v-model="daemon"
+                                    flat
+                                    solo-inverted
+                                    hide-details
+                                    :items="daemons"
+                                    prepend-inner-icon="dns"
+                                    background-color="primary"
+                                    label="Choose Daemon"
+                            ></v-select>
+                            <v-spacer v-if="$vuetify.breakpoint.mdAndUp"></v-spacer>
+                            <v-btn
+                                    v-if="$vuetify.breakpoint.mdAndUp"
+                                    large
+                                    depressed
+                                    color="blue"
+                                    href="/dashoard/status"
+                            >
+                                Status
+                            </v-btn>
+                        </template>
+                    </v-toolbar>
+                </v-col>
+                <v-col cols="12">
                     <v-card>
                         <v-card-title>
                             {{ this.daemon }} Status
@@ -50,53 +93,10 @@
                         </div>
                     </v-card>
                 </v-col>
-                <v-col cols="12">
-                    <v-toolbar
-                            dark
-                            color="indigo"
-                            flat
-                            style="border-radius:4px"
-
-                    >
-                        <v-text-field
-                                v-model="search"
-                                clearable
-                                flat
-                                solo-inverted
-                                hide-details
-                                prepend-inner-icon="search"
-                                label="Search All Daemon"
-                                background-color="primary"
-                        ></v-text-field>
-                        <template>
-                            <v-spacer></v-spacer>
-                            <v-select
-                                    v-model="daemon"
-                                    flat
-                                    solo-inverted
-                                    hide-details
-                                    :items="daemons"
-                                    prepend-inner-icon="dns"
-                                    background-color="primary"
-                                    label="Choose Daemon"
-                            ></v-select>
-                            <v-spacer v-if="$vuetify.breakpoint.mdAndUp"></v-spacer>
-                            <v-btn
-                                    v-if="$vuetify.breakpoint.mdAndUp"
-                                    large
-                                    depressed
-                                    color="blue"
-                                    href="/dashoard/status"
-                            >
-                                Status
-                            </v-btn>
-                        </template>
-                    </v-toolbar>
-                </v-col>
                 <v-col cols="12" class="dashboard">
                     <v-card>
                         <v-card-title>
-                            {{ this.daemon }}
+                            {{ this.daemon }} Server List
                             <v-spacer></v-spacer>
                             <v-text-field
                                     v-model="search"

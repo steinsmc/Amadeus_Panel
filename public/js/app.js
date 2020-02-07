@@ -25936,6 +25936,88 @@ var render = function() {
                 { attrs: { cols: "12" } },
                 [
                   _c(
+                    "v-toolbar",
+                    {
+                      staticStyle: { "border-radius": "4px" },
+                      attrs: { dark: "", color: "indigo", flat: "" }
+                    },
+                    [
+                      _c("v-text-field", {
+                        attrs: {
+                          clearable: "",
+                          flat: "",
+                          "solo-inverted": "",
+                          "hide-details": "",
+                          "prepend-inner-icon": "search",
+                          label: "Search All Daemon",
+                          "background-color": "primary"
+                        },
+                        model: {
+                          value: _vm.search,
+                          callback: function($$v) {
+                            _vm.search = $$v
+                          },
+                          expression: "search"
+                        }
+                      }),
+                      _vm._v(" "),
+                      [
+                        _c("v-spacer"),
+                        _vm._v(" "),
+                        _c("v-select", {
+                          attrs: {
+                            flat: "",
+                            "solo-inverted": "",
+                            "hide-details": "",
+                            items: _vm.daemons,
+                            "prepend-inner-icon": "dns",
+                            "background-color": "primary",
+                            label: "Choose Daemon"
+                          },
+                          model: {
+                            value: _vm.daemon,
+                            callback: function($$v) {
+                              _vm.daemon = $$v
+                            },
+                            expression: "daemon"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _vm.$vuetify.breakpoint.mdAndUp
+                          ? _c("v-spacer")
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.$vuetify.breakpoint.mdAndUp
+                          ? _c(
+                              "v-btn",
+                              {
+                                attrs: {
+                                  large: "",
+                                  depressed: "",
+                                  color: "blue",
+                                  href: "/dashoard/status"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                            Status\n                        "
+                                )
+                              ]
+                            )
+                          : _vm._e()
+                      ]
+                    ],
+                    2
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { cols: "12" } },
+                [
+                  _c(
                     "v-card",
                     [
                       _c("v-card-title", [
@@ -26036,88 +26118,6 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "v-col",
-                { attrs: { cols: "12" } },
-                [
-                  _c(
-                    "v-toolbar",
-                    {
-                      staticStyle: { "border-radius": "4px" },
-                      attrs: { dark: "", color: "indigo", flat: "" }
-                    },
-                    [
-                      _c("v-text-field", {
-                        attrs: {
-                          clearable: "",
-                          flat: "",
-                          "solo-inverted": "",
-                          "hide-details": "",
-                          "prepend-inner-icon": "search",
-                          label: "Search All Daemon",
-                          "background-color": "primary"
-                        },
-                        model: {
-                          value: _vm.search,
-                          callback: function($$v) {
-                            _vm.search = $$v
-                          },
-                          expression: "search"
-                        }
-                      }),
-                      _vm._v(" "),
-                      [
-                        _c("v-spacer"),
-                        _vm._v(" "),
-                        _c("v-select", {
-                          attrs: {
-                            flat: "",
-                            "solo-inverted": "",
-                            "hide-details": "",
-                            items: _vm.daemons,
-                            "prepend-inner-icon": "dns",
-                            "background-color": "primary",
-                            label: "Choose Daemon"
-                          },
-                          model: {
-                            value: _vm.daemon,
-                            callback: function($$v) {
-                              _vm.daemon = $$v
-                            },
-                            expression: "daemon"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _vm.$vuetify.breakpoint.mdAndUp
-                          ? _c("v-spacer")
-                          : _vm._e(),
-                        _vm._v(" "),
-                        _vm.$vuetify.breakpoint.mdAndUp
-                          ? _c(
-                              "v-btn",
-                              {
-                                attrs: {
-                                  large: "",
-                                  depressed: "",
-                                  color: "blue",
-                                  href: "/dashoard/status"
-                                }
-                              },
-                              [
-                                _vm._v(
-                                  "\n                            Status\n                        "
-                                )
-                              ]
-                            )
-                          : _vm._e()
-                      ]
-                    ],
-                    2
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-col",
                 { staticClass: "dashboard", attrs: { cols: "12" } },
                 [
                   _c(
@@ -26129,7 +26129,7 @@ var render = function() {
                           _vm._v(
                             "\n                        " +
                               _vm._s(this.daemon) +
-                              "\n                        "
+                              " Server List\n                        "
                           ),
                           _c("v-spacer"),
                           _vm._v(" "),
