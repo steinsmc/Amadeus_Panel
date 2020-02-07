@@ -18,7 +18,7 @@ import preview from 'vue-photo-preview'
 import VueLazyload from 'vue-lazyload'
 import 'vue-photo-preview/dist/skin.css'
 import VueRouter from 'vue-router'
-
+import VueI18n from 'vue-i18n'
 
 console.log("\n" +
     " ______                              __                             \n" +
@@ -36,6 +36,7 @@ Vue.use(Vuex);
 Vue.use(preview);
 Vue.use(VueLazyload);
 Vue.use(VueRouter);
+Vue.use(VueI18n);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
@@ -60,6 +61,18 @@ const store = new Vuex.Store({
     }
 });
 
+const messages = {
+    en: {
+        message: {
+            hello: 'hello world'
+        }
+    },
+    zh_cn: {
+        message: {
+            hello: '你好世界'
+        }
+    }
+};
 const app = new Vue({
     el: '#amadeus-bugdhdj-app', //BUGDHDJ 保佑无需debug
     store,
@@ -67,5 +80,9 @@ const app = new Vue({
     router: new VueRouter({
         routes
     }),
+    i18n: new VueI18n({
+        locale: 'zh-cn',
+        messages,
+    })
 });
 
