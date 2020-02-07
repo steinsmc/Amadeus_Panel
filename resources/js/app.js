@@ -9,8 +9,8 @@
 
 require('./bootstrap');
 window.Vue = require('vue');
-import Dashboard from './components/Dashboard';
-import About from './components/About';
+import Dashboard from './components/views/single/Dashboard';
+import About from './components/views/single/About';
 
 import Vuetify from 'vuetify';
 import Vuex from 'vuex'
@@ -81,7 +81,7 @@ const app = new Vue({
         routes
     }),
     i18n: new VueI18n({
-        locale: 'zh_cn',
+        locale: 'en',
         messages: loadLocaleMessages(),
     })
 });

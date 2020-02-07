@@ -13,7 +13,7 @@
 
                 <v-list-item-content>
                     <v-list-item-title>{{ user.name }}</v-list-item-title>
-                    <v-list-item-subtitle>Root Admin</v-list-item-subtitle>
+                    <v-list-item-subtitle>{{ $t("user.root") }}</v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
 
@@ -129,11 +129,14 @@
 
                 </v-sheet>
             </v-bottom-sheet>
+
+            <SwitchLanguage/>
         </v-app-bar>
     </div>
 </template>
 
 <script>
+    import SwitchLanguage from './../components/SwitchLanguage'
     /*
     * Layout
     * <Layout model="Labels" child="Create label"></Layout>
@@ -172,6 +175,9 @@
                 avatar: null
             },
         }),
+        components: {
+            SwitchLanguage
+        },
         created: function(){
             window.axios.post('/user', {
             }).then(response => {

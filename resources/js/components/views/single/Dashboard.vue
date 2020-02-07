@@ -4,8 +4,7 @@
             <v-row >
                 <v-col cols="12" style="padding:0;padding-top:0;padding-left:12px;padding-right:12px;">
                     <v-alert type="info" dismissible>
-                        {{ $t("hello") }}
-                        This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.
+                        {{ $t("welcome") }}
                     </v-alert>
                 </v-col>
                 <v-col cols="12">

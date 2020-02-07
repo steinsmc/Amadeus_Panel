@@ -19,7 +19,15 @@
                         xl="4"
                     >
                         <v-card class="elevation-12 login-card" :loading="loading">
-                            <v-card-text>
+                            <v-toolbar
+                                    flat
+                            >
+                                <v-spacer />
+                                <SwitchLanguage/>
+                            </v-toolbar>
+                            <v-card-text
+                                    style="margin-top: -31px"
+                            >
                                 <div class="login_card_title">
                                     <h1><v-icon>cloud</v-icon> {{ this.app_name}}</h1>
                                 </div>
@@ -35,7 +43,7 @@
                                         {{ alert.message }}
                                     </v-alert>
                                     <v-text-field
-                                        label="Login"
+                                        :label="$t('user.name')"
                                         name="login"
                                         v-model="name"
                                         prepend-icon="person"
@@ -44,8 +52,7 @@
                                     />
 
                                     <v-text-field
-                                        id="password"
-                                        label="Password"
+                                        :label="$t('user.password')"
                                         name="password"
                                         v-model="password"
                                         prepend-icon="lock"
@@ -54,8 +61,8 @@
                                     />
                                     <v-checkbox
                                         v-model="checkbox"
-                                        :rules="[v => !!v || 'You must agree to continue!']"
-                                        label="Do you donate us?"
+                                        :rules="[v => !!v || $t('user.checkbox.alert')]"
+                                        :label="$t('user.checkbox.donate')"
                                         required
                                     ></v-checkbox>
                                 </v-form>
@@ -69,7 +76,7 @@
                                         :loading="loading"
                                         href="/"
                                 >
-                                    <v-icon>keyboard_arrow_left</v-icon> BACK
+                                    <v-icon>keyboard_arrow_left</v-icon> {{$t('user.back')}}
                                 </v-btn>
                                 <v-spacer></v-spacer>
                                 <v-btn
@@ -78,7 +85,7 @@
                                     :loading="loading"
                                     @click="login()"
                                 >
-                                    Login
+                                    {{$t('user.login')}}
                                 </v-btn>
                             </v-card-actions>
                         </v-card>
@@ -92,11 +99,12 @@
 
 
 <script>
-    import Layout from "./layout/Layout";
+    import Layout from "./layouts/Layout";
+    import SwitchLanguage from "./components/SwitchLanguage";
     export default {
         name: "Login",
         components: {
-            Layout
+            SwitchLanguage
         },
         data: () => ({
             app_name: document.getElementsByTagName('meta')['amadeus_app_name'].content,
@@ -111,7 +119,7 @@
             loading: false,
         }),
         mounted(){
-            this.info("测试账号密码均为bugdhdj");
+            this.info("测试账号密码均为 bugdhdj");
         },
         methods: {
             error: function (message) {
@@ -129,6 +137,7 @@
                 this.alert.type = "success";
                 this.alert.display = true;
             },
+
             login: function () {
                 this.loading = true;
                 this.alert.display = false;
