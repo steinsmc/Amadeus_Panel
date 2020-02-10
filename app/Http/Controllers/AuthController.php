@@ -42,7 +42,10 @@ class AuthController extends Controller
     {
         Auth::logout();
 
-        return redirect('/');
+        if(Auth::check()){
+            return response()->json(['success' => false],500);
+        }
+        return response()->json(['success' => true],200);
     }
 
     public function getUser()

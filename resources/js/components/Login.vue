@@ -99,7 +99,6 @@
 
 
 <script>
-    import Layout from "./layouts/Layout";
     import SwitchLanguage from "./components/SwitchLanguage";
     export default {
         name: "Login",
@@ -132,7 +131,7 @@
                 this.alert.type = "info";
                 this.alert.display = true;
             },
-            success: function(message) {
+            success: function (message) {
                 this.alert.message = message;
                 this.alert.type = "success";
                 this.alert.display = true;
@@ -145,13 +144,17 @@
                     name: this.name,
                     password: this.password
                 }).then(response => {
-                    this.success("登录成功");
-                    setTimeout(window.location.href="/#/dashboard",1);
-                }).catch (response => {
-                    if(response.response.status === 401){
+                    if (response.data.success === true) {
+                        this.success("登录成功");
+                        setTimeout(window.location.href = "/dashboard", 1);
+                    }
+                }).catch(response => {
+                    if (response.response.status === 401) {
                         this.error("用户名或密码不匹配");
-                    }else{
-                        this.error("用户名或密码不匹配 请重试");
+                    } else if (response.response.status === 500) {
+                        this.error("Amadeus Panel 处于不可用状态");
+                    } else {
+                        this.error("用户名或密码不匹配");
                     }
                     this.loading = false;
                 });

@@ -1,6 +1,6 @@
 <template>
     <v-menu offset-y>
-        <template v-slot:activator="{ on }">
+        <template v-slot:activator="{ on }" transition="scroll-y-transition">
             <v-btn
                     text
                     v-on="on"

@@ -9,8 +9,6 @@
 
 require('./bootstrap');
 window.Vue = require('vue');
-import Dashboard from './components/views/single/Dashboard';
-import About from './components/views/single/About';
 
 import Vuetify from 'vuetify';
 import Vuex from 'vuex'
@@ -19,6 +17,7 @@ import VueLazyload from 'vue-lazyload'
 import 'vue-photo-preview/dist/skin.css'
 import VueRouter from 'vue-router'
 import VueI18n from 'vue-i18n'
+import router from './router'
 
 console.log("\n" +
     " ______                              __                             \n" +
@@ -39,16 +38,8 @@ Vue.use(VueRouter);
 Vue.use(VueI18n);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
 Vue.component('login',require('./components/Login').default);
-
 Vue.component('singlepage',require('./components/SinglePage').default);
-
-//TODO: NOT FOUND 与不需要vuerouter的路由处理
-const routes = [
-    { path: '/dashboard', component: Dashboard },
-    { path: '/about', component: About },
-];
 
 function loadLocaleMessages () {
     const locales = require.context('./../lang', true, /[A-Za-z0-9-_,\s]+\.json$/i)
@@ -78,7 +69,8 @@ const app = new Vue({
     store,
     vuetify: new Vuetify({}),
     router: new VueRouter({
-        routes
+        mode: 'history',
+        routes: router
     }),
     i18n: new VueI18n({
         locale: 'en',
@@ -86,3 +78,4 @@ const app = new Vue({
     })
 });
 
+//TODO: ServiceWorker

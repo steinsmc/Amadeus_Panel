@@ -87,6 +87,19 @@
                         </v-list-item-content>
                     </v-list-item>
                 </template>
+                <v-list-item
+                        link
+                        @click="logout"
+                >
+                    <v-list-item-action>
+                        <v-icon>logout</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>
+                            Logout
+                        </v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
             </v-list>
         </v-navigation-drawer>
         <v-app-bar
@@ -155,20 +168,19 @@
             drawer: window.localStorage.getItem("drawer") !== "false",
             sheet: false,
             items: [
-                { icon: 'home', text: 'Home',model: null,url: '/'},
-                { icon: 'dashboard', text: 'Dashboard',model: null,url: '/dashboard'},
-                { icon: 'help_outline', text: 'About',model: null,url: '/about'},
+                {icon: 'home', text: 'Home', model: null, url: '/'},
+                {icon: 'dashboard', text: 'Dashboard', model: null, url: '/dashboard'},
+                {icon: 'help_outline', text: 'About', model: null, url: '/about'},
                 {
                     icon: 'mdi-chevron-up',
                     'icon-alt': 'mdi-chevron-down',
                     text: 'Labels',
                     model: null,
                     children: [
-                        { icon: 'mdi-plus', text: 'Create label',model: null},
-                        { icon: 'mdi-plus', text: 'Create label2',model: null},
+                        {icon: 'mdi-plus', text: 'Create label', model: null},
+                        {icon: 'mdi-plus', text: 'Create label2', model: null},
                     ],
                 },
-                { icon: 'logout', text: 'Logout',model: null,url: '/logout'},
             ],
             user: {
                 name: null,
@@ -178,26 +190,25 @@
         components: {
             SwitchLanguage
         },
-        created: function(){
-            window.axios.post('/user', {
-            }).then(response => {
+        created: function () {
+            window.axios.post('/user', {}).then(response => {
                 this.user.name = response.data.data.name;
                 this.user.avatar = response.data.data.avatar;
-            }).catch (response => {
-                if(response.response.status === 401){
-                    window.location.href="/login";
-                }else{
+            }).catch(response => {
+                if (response.response.status === 401) {
+                    window.location.href = "/login";
+                } else {
 
                 }
             });
 
             //不知道除了for循环之外还有啥好方案
             this.items.forEach((item) => {
-                if(item.text === this.$attrs.model){
+                if (item.text === this.$attrs.model) {
                     item.model = true;
-                    if(item.children != null) {
+                    if (item.children != null) {
                         item.children.forEach((child) => {
-                            if(child.text === this.$attrs.child){
+                            if (child.text === this.$attrs.child) {
                                 child.model = true;
                             }
                         });
@@ -207,9 +218,18 @@
 
 
         },
+        methods: {
+            logout: function () {
+                window.axios.post('/logout', {}).then(response => {
+                    window.location.href = "/";
+                }).catch(response => {
+
+                });
+            }
+        },
         watch: {
-            drawer(newVal,oldVal){
-                window.localStorage.setItem("drawer",newVal);
+            drawer(newVal, oldVal) {
+                window.localStorage.setItem("drawer", newVal);
             }
         },
     }

@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view("single");
-})->middleware("auth");
 
 Route::get('/login',function (){
     if(auth()->check()) {
@@ -22,8 +19,13 @@ Route::get('/login',function (){
     return view("login");
 
 })->name('login');
+
+Route::view('/{query}','single')->where('query','.*');
+
+
+//API
 Route::post('/login',"AuthController@login");
-Route::any('/logout',"AuthController@logout");
+Route::post('/logout',"AuthController@logout");
 Route::any('/user',"AuthController@getUser");
 Route::any('/register',"AuthController@register");
 
