@@ -1,12 +1,20 @@
 # Amadeus Panel
 
+<center><b>Powered by Bugdhdj</b></center>
+
 ```shell
+# Pull i18h
+git submodule update --init --recursive
+
+# Composer
 composer install
+php -r "file_exists('.env') || copy('.env.example', '.env');
+php artisan key:generate --ansi
 # EDIT .env
 php artisan migrate
-npm install
 
-# Start Server
+# Frontend
+npm install
 npm run watch
-php artisan serve
+caddy # or php artisan serve 
 ```

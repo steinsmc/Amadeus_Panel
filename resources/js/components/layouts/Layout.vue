@@ -58,6 +58,7 @@
                                 v-for="(child, i) in item.children"
                                 :key="i"
                                 link
+                                :to="child.url"
                                 v-model="child.model"
                         >
                             <v-list-item-action v-if="child.icon">
@@ -125,10 +126,10 @@
                             text
                             v-on="on"
                     >
-                        Powered by Amadeus
+                        {{ $t('powered')}}
                     </v-btn>
                 </template>
-                <v-sheet class="text-center powered" height="270px">
+                <v-sheet class="text-center powered" height="300px">
                     <v-btn
                             class="mt-6"
                             text
@@ -174,11 +175,11 @@
                 {
                     icon: 'mdi-chevron-up',
                     'icon-alt': 'mdi-chevron-down',
-                    text: 'Labels',
+                    text: '测试页面@dhdj需要完成的',
                     model: null,
                     children: [
-                        {icon: 'mdi-plus', text: 'Create label', model: null},
-                        {icon: 'mdi-plus', text: 'Create label2', model: null},
+                        {icon: 'mdi-plus', text: 'Server List', model: null,url: '/server'},
+                        {icon: 'mdi-plus', text: 'Server ID 1', model: null,url: '/server/1'},
                     ],
                 },
             ],

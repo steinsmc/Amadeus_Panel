@@ -1,0 +1,9 @@
+localhost:8080
+
+root ./public
+log ./logs/access-dev.log
+errors ./logs/error-dev.log
+fastcgi / 127.0.0.1:9000 php
+rewrite {
+    to {path} {path}/ /index.php?{query}
+}

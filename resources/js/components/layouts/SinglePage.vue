@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import Layout from './../components/layouts/Layout';
+    import Layout from './Layout';
 
     export default {
         name: "SinglePage",

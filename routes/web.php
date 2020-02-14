@@ -11,6 +11,13 @@
 |
 */
 
+Route::get('/',function (){
+   if(\Illuminate\Support\Facades\Auth::check()){
+       return redirect("/dashboard");
+   }else{
+       return redirect("/login");
+   }
+});
 
 Route::get('/login',function (){
     if(auth()->check()) {
