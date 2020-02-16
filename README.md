@@ -8,7 +8,7 @@ git submodule update --init --recursive
 
 # Composer
 composer install
-php -r "file_exists('.env') || copy('.env.example', '.env');
+php -r "file_exists('.env') || copy('.env.example', '.env');"
 php artisan key:generate --ansi
 # EDIT .env
 php artisan migrate
