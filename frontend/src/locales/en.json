@@ -1,0 +1,18 @@
+{
+  "lang": "English",
+  "hello": "Hello",
+  "powered": "Powered By Amadeus",
+  "welcome": "This is an demo of Amadeus Panel's functionality. The panel is currently under heavy construction, please consider joining the dev team if possible.",
+  "user": {
+    "name": "Username",
+    "password": "Password",
+    "back": "Back",
+    "login": "Login",
+    "root": "Root Admin",
+    "checkbox": {
+      "donate": "Do you donate us?",
+      "alert": "You must agree to continue!"
+    }
+  }
+
+}

@@ -1,0 +1,17 @@
+{
+  "lang": "简体中文",
+  "hello": "你好",
+  "powered": "Amadeus 驱动",
+  "welcome": "这是Amadeus Panel功能的演示。这个面板目前正在进行繁重的开发，如果有兴趣参与开发，请联系我们",
+  "user": {
+    "name": "用户名",
+    "password": "密码",
+    "back": "返回",
+    "login": "登录",
+    "root": "超级管理员",
+    "checkbox": {
+      "donate": "你要赞助我们吗?",
+      "alert": "你需要同意才可以继续?"
+    }
+  }
+}
